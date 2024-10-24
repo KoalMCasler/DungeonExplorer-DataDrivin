@@ -17,6 +17,7 @@ namespace TextRPG_OOP_
         private EnemyManager enemyManager;
         public Map gameMap;
         public ItemManager itemManager;
+        public SettingsManager settingsManager;
         public Settings settings;
         /// <summary>
         /// Gets all references so game is ready to start up
@@ -25,7 +26,8 @@ namespace TextRPG_OOP_
         {
             Console.CursorVisible = false;
             Debug.WriteLine("Setting Up characters");
-            settings = new Settings();
+            settingsManager = new SettingsManager();
+            settings = settingsManager.savedSettings;
             itemManager = new ItemManager();
             gameMap = new Map(itemManager);
             enemyManager = new EnemyManager(gameMap, settings);

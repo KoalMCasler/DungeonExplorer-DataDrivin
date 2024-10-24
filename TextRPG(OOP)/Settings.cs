@@ -12,14 +12,27 @@ namespace TextRPG_OOP_
     internal class Settings
     {
         //Base values for all stats. 
-        public int PlasmoidBaseHP = 3;
-        public int PlasmoidBaseDamage = 0;
-        public int ConstructBaseHP = 3;
-        public int ConstructBaseDamage = 0;
-        public int GoblinFolkBaseHP = 3;
-        public int GoblinFolkBaseDamage = 0;
-        public int playerMaxHP = 10;
-        public int playerStartingCoins = 0;
-        public int PlayerBaseDamager = 1;
+        public int PlasmoidBaseHP { get; set; }
+        public int PlasmoidBaseDamage { get; set; }
+        public int ConstructBaseHP { get; set; }
+        public int ConstructBaseDamage { get; set; }
+        public int GoblinFolkBaseHP { get; set; }
+        public int GoblinFolkBaseDamage { get; set; }
+        public int playerMaxHP { get; set; }
+        public int playerStartingCoins { get; set; }
+        public int PlayerBaseDamager { get; set; }
+
+        public Settings()
+        {
+            PlasmoidBaseHP = 3;
+            PlasmoidBaseDamage = 0;
+            ConstructBaseHP = 3;
+            ConstructBaseDamage = 0;
+            GoblinFolkBaseHP = 1;
+            GoblinFolkBaseDamage = 0;
+            playerMaxHP = 10;
+            playerStartingCoins = 0;
+            PlayerBaseDamager = 1;
+        }
     }
 }
